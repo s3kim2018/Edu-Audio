@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/session.css')}}">
+    <title> Main Page </title>
+    <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/drawingboard.css')}}">
+</head>
+<body>
+    <div class = "head">
+        <img src = "{{url_for('static', filename = 'img/logo.png')}}">
+        <p> Logout </p>
+        <a style = "color: black; text-decoration: none;" href = "/stopsession/{{id}}"> Stop Session</a>
+        <p> Session-ID = <span id = "id" style = "color: blue">{{id}}</span></p>
+    </div>
+    <div class = "content">
+        <div class = "drawingboardcont">
+            <div id = "drawingboard"> </div>
+            <div class = "eh" style = "display: flex">
+                <button id = "button1"> Convert </button>
+                <button id = "button2"> Send to Student </button>
+            </div>
+        </div>
+        <textarea class = "whiteboard" id = "wb">{{data}}</textarea>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/drawingboard.js/0.4.6/drawingboard.min.js"></script>
+    <script src = "{{url_for('static', filename = 'js/session.js')}}"></script>
+
+
+</body>
+</html>

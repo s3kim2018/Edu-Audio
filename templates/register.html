@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <title>Document</title>
+    <style>
+        input[type=email], select{
+            width: 500px;
+            padding: 18px 30px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type=password], select{
+            width: 500px;
+            padding: 18px 30px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input.submit{
+            padding: 18px 30px;
+            border: 1px solid #000000;
+            border-radius: 20px;
+            width: 500px;
+        }
+        body {background-color: #ffebcd;}
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+        }
+        .error {
+            color: red;
+            font-family: 'Roboto', arial;
+        }
+    </style>
+    
+</head>
+<body>
+    <div style="text-align: center;" >
+        <div id="logo">
+            <img src="{{url_for('static', filename = 'img/logo.png')}}" alt="Trulli" width="500" height="300">
+            <h2 style = "font-family: 'Roboto', arial">Register Account</h2>
+        </div>
+        <div id="Login">
+            <form method = "POST" action = "/register">
+                <input type="email" name = "email"  placeholder="Set Your Email"><br><br>
+                <input type="password" name = "password"  placeholder="Set Your Password"><br><br>
+                <input type="password" name = "confpassword"  placeholder="Confirm Your Password"><br><br>
+                <input type="submit" class="submit" value="Regester">
+            </form>
+            {% if message %}
+            <p class = "error"> {{message}}</p>
+            {% endif %}
+
+        </div>
+    </div>
+</body>
+</html>

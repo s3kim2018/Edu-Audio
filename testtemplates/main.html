@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel = "stylesheet" href = "main2.css">
+    <title> Main Page </title>
+</head>
+<body>
+    <div class = "head">
+        <img src = "img/logo.png">
+        <p> Logout </p>
+    </div>
+    <div class = "content">
+        <div class = "create" id = "uno">
+            <p class = "centered">Create a Lecture Session</p>
+            <img class = imges src = "img/lecture.png">
+        </div>
+        <div class = "join" id = "dos">
+            <p class = "centered">Join a Lecture Session</p>
+            <img class = imges src = "img/student.png">
+        </div>
+        <div class = "mynotes" id = "tres">
+            <p class = "centered">My Notes</p>
+            <img class = imges src = "img/reading.png">
+        </div>
+    </div>
+    <div class = "popup" style = "display: none; position: absolute; border-radius: 10px; width: 600px; height: 500px; top: 170px; left: 400px; margin: auto; background: white;">
+        <p style = "float: right; padding-right: 20px;">&#10060;</p>
+        <h2 style = "text-align: center; padding-top: 80px; ">Please Enter Your Class Code</h2>
+        <form>
+            <input style = "width: 300px; height: 40px; margin-left: calc((600px - 300px)/2); margin-top: 30px; border-radius: 10px; border: 1px orange solid;" type="text" name = "code" placeholder="Enter Here">
+            <br>
+            <button style = "width: 100px; height: 40px; margin-left: calc((600px - 100px)/2); font-size: 17px; margin-top: 30px; border-radius: 5px; "> Submit </button>
+        </form>
+
+    </div>
+    <script src = "main.js"></script>
+</body>
+</html>
